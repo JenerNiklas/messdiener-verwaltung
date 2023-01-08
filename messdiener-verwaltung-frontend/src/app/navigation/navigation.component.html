@@ -1,0 +1,26 @@
+<nav>
+  <ul>
+    <li class="menuItem overview">
+      <a routerLink="/uebersicht">
+        <div class="item"><i class="fa-solid fa-table overviewIcon"></i> Übersicht </div>
+      </a>
+    </li>
+  </ul>
+  <ul class="bottomNavigation">
+    <li *ngIf="!this.isLoggedIn()" class="menuItem login">
+      <a routerLink="/login">
+        <div class="item"><i class="fa-solid fa-right-to-bracket loginIcon"></i> Login </div>
+      </a>
+    </li>
+    <li *ngIf="!this.isLoggedIn()" class="menuItem register">
+      <a routerLink="/register">
+        <div class="item"><i class="fa-solid fa-user-plus registerIcon"></i> Registrieren </div>
+      </a>
+    </li>
+    <li *ngIf="this.isLoggedIn()" class="menuItem logout">
+      <a (click)="this.logout()">
+        <div class="item"><i class="fa-solid fa-right-from-bracket logoutIcon"></i> Ausloggen</div>
+      </a>
+    </li>
+  </ul>
+</nav>

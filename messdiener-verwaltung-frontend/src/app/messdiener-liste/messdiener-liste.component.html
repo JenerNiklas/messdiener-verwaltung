@@ -1,0 +1,25 @@
+<h2>Übersicht / Alle Messdiener</h2>
+<div class="emailButtons">
+  <button class="emailButton" (click)="copyAllActiveEmails()">E-Mails aller aktiven Messdiener kopieren</button>
+  <button class="emailButton" (click)="copyAllEmails()">E-Mails aller Messdiener kopieren</button>
+</div>
+<table>
+  <tr>
+    <th></th>
+    <th>Vorname</th>
+    <th>Nachname</th>
+    <th>E-Mail</th>
+    <th>Tel.-Nr.</th>
+    <th>Aktiv</th>
+    <th>Neu</th>
+  </tr>
+  <tr *ngFor="let person of messdiener; index as i;" class="{{i % 2 == 0 ? 'even' : 'odd'}}">
+    <td><a routerLink="/detail/{{person.iid}}"><i class="fa-solid fa-pen"></i></a></td>
+    <td>{{person.vorname}}</td>
+    <td>{{person.nachname}}</td>
+    <td>{{person.email}}</td>
+    <td>{{person.telefon}}</td>
+    <td class="checkmark"><i class="fa-solid {{person.aktiv ? 'fa-check' : 'fa-xmark'}}"></i></td>
+    <td class="checkmark"><i class="fa-solid {{person.neu ? 'fa-check' : 'fa-xmark'}}"></i></td>
+  </tr>
+</table>

@@ -1,0 +1,48 @@
+<button (click)="goBack()" class="largeButton">&lt;- Zurück</button>
+<div *ngIf="messdiener">
+  <h1>{{messdiener.vorname}} {{messdiener.nachname}}</h1>
+
+  <div class="row">
+    <div class="inputContainer">
+      <label for="vorname">Vorname: </label>
+      <input id="vorname" [(ngModel)]="messdiener.vorname" placeholder="Vorname" type="text">
+    </div>
+  
+    <div class="inputContainer">
+      <label for="nachname">Nachname: </label>
+      <input id="nachname" [(ngModel)]="messdiener.nachname" placeholder="Nachname" type="text">
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="inputContainer">
+      <label for="email">E-Mail: </label>
+      <input id="email" [(ngModel)]="messdiener.email" placeholder="beispiel@beispiel.de" type="email">
+    </div>
+  
+    <div class="inputContainer">
+      <label for="telefon">Tel.-Nr.: </label>
+      <input id="telefon" [(ngModel)]="messdiener.telefon" placeholder="0228 1234567" type="text">
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="inputContainer">
+      <label class="checkbox" for="neu">Neu: </label>
+      <input id="neu" [(ngModel)]="messdiener.neu" type="checkbox">
+    </div>
+  
+    <div class="inputContainer">
+      <label class="checkbox" for="aktiv">Aktiv: </label>
+      <input id="aktiv" [(ngModel)]="messdiener.aktiv" type="checkbox">
+    </div>
+  </div>
+
+  <div class="inputContainer">
+    <label for="anmerkung">Anmerkung:</label>
+    <textarea id="anmerkung" [(ngModel)]="messdiener.anmerkung" placeholder="Anmerkungen..."></textarea>
+  </div>
+  <button (click)="save()" class="largeButton">Speichern</button>
+</div>
+
+<div *ngIf="messageText!=''" class="message success" [(ngModel)]="messageText">Test</div>

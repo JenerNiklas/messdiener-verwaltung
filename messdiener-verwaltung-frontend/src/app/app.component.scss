@@ -1,0 +1,26 @@
+app-navigation
+{
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-size);
+  height: 100%;
+  background-color: var(--sidebar-background-color);
+  box-shadow: 1px 0px 10px 0px;
+}
+
+main
+{
+  display: block;
+  margin-left: calc(var(--sidebar-size) + 20px);
+  padding: 10px;
+  padding-left: 30px;
+  padding-bottom: 50px;
+  min-height: calc(100% - 20px);
+  overflow-y: auto;
+}
+
+app-messages {
+  display: none;
+}

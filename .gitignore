@@ -1,0 +1,45 @@
+messdiener-verwaltung-backend/.env
+messdiener-verwaltung-backend/database
+messdiener-verwaltung-backend/node_modules
+messdiener-verwaltung-backend/access.log
+
+# Compiled output
+messdiener-verwaltung-frontend/dist
+messdiener-verwaltung-frontend/tmp
+messdiener-verwaltung-frontend/out-tsc
+messdiener-verwaltung-frontend/bazel-out
+
+# Node
+messdiener-verwaltung-frontend/node_modules
+messdiener-verwaltung-frontend/npm-debug.log
+messdiener-verwaltung-frontend/yarn-error.log
+
+# IDEs and editors
+messdiener-verwaltung-frontend/.idea/
+messdiener-verwaltung-frontend/.project
+messdiener-verwaltung-frontend/.classpath
+messdiener-verwaltung-frontend/.c9/
+messdiener-verwaltung-frontend/*.launch
+messdiener-verwaltung-frontend/.settings/
+messdiener-verwaltung-frontend/*.sublime-workspace
+
+# Visual Studio Code
+messdiener-verwaltung-frontend/.vscode/*
+messdiener-verwaltung-frontend/!.vscode/settings.json
+messdiener-verwaltung-frontend/!.vscode/tasks.json
+messdiener-verwaltung-frontend/!.vscode/launch.json
+messdiener-verwaltung-frontend/!.vscode/extensions.json
+messdiener-verwaltung-frontend/.history/*
+
+# Miscellaneous
+messdiener-verwaltung-frontend/.angular/cache
+messdiener-verwaltung-frontend/.sass-cache/
+messdiener-verwaltung-frontend/connect.lock
+messdiener-verwaltung-frontend/coverage
+messdiener-verwaltung-frontend/libpeerconnection.log
+messdiener-verwaltung-frontend/testem.log
+messdiener-verwaltung-frontend/typings
+
+# System files
+messdiener-verwaltung-frontend/.DS_Store
+messdiener-verwaltung-frontend/Thumbs.db

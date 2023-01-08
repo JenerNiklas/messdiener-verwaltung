@@ -1,0 +1,21 @@
+.row {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.inputContainer {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+}
+
+label.checkbox {
+  display: inline;
+}
+
+textarea {
+  width: calc((258px * 2) + 12px);
+}

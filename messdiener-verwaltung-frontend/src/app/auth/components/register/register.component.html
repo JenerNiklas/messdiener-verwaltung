@@ -1,0 +1,12 @@
+<h1>Registrieren</h1>
+<form [formGroup]="form" (ngSubmit)="submitForm()" *ngIf="!this.isLogin">
+  <div>
+    <input type="text" placeholder="Benutzername" formControlName="username">
+  </div>
+  <div>
+    <input type="password" placeholder="Passwort" formControlName="password">
+  </div>
+  <button type="submit">Registrieren</button>
+</form>
+
+<h1 *ngIf="this.isLogin">Du bist bereits eingeloggt</h1>
