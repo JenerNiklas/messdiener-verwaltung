@@ -13,7 +13,7 @@ export function login(req, res, next) {
     const sql = "SELECT * FROM users WHERE username=? AND password=? AND confirmed=1";
 
     con.query(sql, [username, hashedPassword], (error, result) => {
-      if(result.length) {
+      if(result && result.length) {
         const token = jwt.sign(
           {data:username},
           config.jwtSecret,
@@ -38,7 +38,7 @@ export function register(req, res, next) {
     const checkUsername = "SELECT * from users WHERE username=?"; 
 
     con.query(checkUsername, [username] , function(error, result) {
-      if(!result.length) {
+      if(result && !result.length) {
         const sql = "INSERT INTO users (username, password) VALUES (?, ?);";
 
         con.query(sql, [username, hashedPassword], (error, result, fields) => {
