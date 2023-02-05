@@ -35,7 +35,7 @@ export class RegisterComponent {
   }
 
   submitForm() {
-    this.apiService.postRequest("api/auth/register", this.form.value).subscribe((res:any) => {
+    this.apiService.postRequest("auth/register", this.form.value).subscribe((res:any) => {
       if(res.status) {
         this.router.navigate(["/login"]);
       }

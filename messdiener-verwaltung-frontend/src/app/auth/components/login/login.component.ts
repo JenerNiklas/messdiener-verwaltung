@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit{
   }
 
   submitForm() {
-    this.apiService.postRequest("api/auth/login", this.form.value).subscribe((res:any) => {
+    this.apiService.postRequest("auth/login", this.form.value).subscribe((res:any) => {
       if(res.status) {
         this.authService.setDataInLocalStorage("userData", JSON.stringify(res.data));
         this.authService.setDataInLocalStorage("token", JSON.stringify(res.token));

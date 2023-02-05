@@ -6,12 +6,13 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 import { Person } from '../person.model';
 import { MessagesService } from './messages.service';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MessdienerService {
-  private messdienerUrl = 'http://localhost:8080/api/messdiener';
+  private messdienerUrl = environment.apiUrl + 'messdiener';
 
   constructor(private messageService: MessagesService, private http: HttpClient) { }
 
