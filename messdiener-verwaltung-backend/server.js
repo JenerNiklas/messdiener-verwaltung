@@ -14,7 +14,6 @@ import { verifyToken } from "./middleware/auth.js";
 dotenv.config();
 const port = process.env.PORT;
 const allowedOrigins = ["http://localhost:4200",
-                        "http://verwaltung.messdiener-vm.de",
                         "https://verwaltung.messdiener-vm.de"];
 
 const app = express();
