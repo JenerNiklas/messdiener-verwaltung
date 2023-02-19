@@ -54,7 +54,8 @@ export function upsert(request, response) {
       response.end(error);
       throw(error);
     }
-    response.end(JSON.stringify(result[0]));
+    
+    response.end(JSON.stringify(result));
   });
 };
 

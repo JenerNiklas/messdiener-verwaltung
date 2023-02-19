@@ -13,7 +13,11 @@
     <th>Aktiv</th>
     <th>Neu</th>
   </tr>
-  <tr *ngFor="let person of messdiener; index as i;" class="{{i % 2 == 0 ? 'even' : 'odd'}}">
+  <tr class="even">
+    <td><a routerLink="/create"><i class="fa-solid fa-user-plus"></i></a></td>
+    <td colspan="7">Messdiener hinzufügen</td>
+  </tr>
+  <tr *ngFor="let person of messdiener; index as i;" class="{{i% 2 == 0 ? 'odd' : 'even'}}">
     <td><a routerLink="/detail/{{person.iid}}"><i class="fa-solid fa-pen"></i></a></td>
     <td>{{person.vorname}}</td>
     <td>{{person.nachname}}</td>

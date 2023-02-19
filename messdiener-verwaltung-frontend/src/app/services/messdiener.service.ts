@@ -32,11 +32,24 @@ export class MessdienerService {
     );
   }
 
+  delete(messdiener: Person | undefined): Observable<any> | undefined {
+    if(messdiener) {
+      return this.http.delete(this.messdienerUrl + "/" + messdiener.iid).pipe(
+        tap(_ => this.log("deleted Messdiener ${this.id}")),
+        catchError(this.handleError("error while deleting messdiener"))
+      );
+    } else {
+      return undefined;
+    }
+  }
+
   update(messdiener: Person | undefined): Observable<any> | undefined {
     if(messdiener)
     {
-      const url = this.messdienerUrl + "/" + messdiener.iid;
-      return this.http.put<Person>(url, messdiener).pipe(
+      let url = this.messdienerUrl;
+      if(messdiener.iid !== null) {url += "/" + messdiener.iid}
+
+      return this.http.post<Person>(url, messdiener).pipe(
         tap(_ => this.log("updated messdiener ${this.id}")),
         catchError(this.handleError<Person>("update ${id}"))
       );
@@ -48,7 +61,7 @@ export class MessdienerService {
   private handleError<T>(operation = "operation", result?: T)
   {
     return (error:any): Observable<T> => {
-      console.error(error);
+      
       this.log(`${operation} failed: ${error.message}`);
       return of(result as T);
     };

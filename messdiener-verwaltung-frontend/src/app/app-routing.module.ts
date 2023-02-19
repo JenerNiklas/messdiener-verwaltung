@@ -12,6 +12,7 @@ import { AuthGuardService } from './services/auth-guard.service';
 const routes: Routes = [
   { path: "uebersicht", canActivate: [AuthGuardService], title: "Übersicht - Messdiener Vilich-Müldorf", component: MessdienerListeComponent },
   { path: "detail/:id", title: "Detail - Messdiener Vilich-Müldorf", component: MessdienerDetailComponent },
+  { path: "create", title: "Hinzufügen - Messdiener Vilich-Müldorf", component: MessdienerDetailComponent },
   { path: "login", title: "Login - Messdiener Vilich-Müldorf", component: LoginComponent },
   { path: "register", title: "Registrieren - Messdiener Vilich-Müldorf", component: RegisterComponent },
   { path: "", title:"Startseite - Messdiener Vilich-Müldorf", component: StartpageComponent},

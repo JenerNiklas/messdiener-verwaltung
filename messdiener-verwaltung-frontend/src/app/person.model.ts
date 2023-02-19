@@ -7,9 +7,9 @@ export class Person {
   public aktiv: boolean;
   public neu: number;
   public anmerkung: String;
-  public iid: number;
+  public iid: number | null;
 
-  constructor(messdienerIid: number, vorname: string, nachname: string, email: string, telefon: string, geschlecht: string, 
+  constructor(messdienerIid: number | null, vorname: string, nachname: string, email: string, telefon: string, geschlecht: string, 
               aktiv: boolean, neu: number, anmerkung: String) {
     this.iid = messdienerIid;
     this.vorname = vorname;

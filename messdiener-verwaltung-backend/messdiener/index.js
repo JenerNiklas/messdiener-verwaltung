@@ -9,7 +9,7 @@ router.get("/:id", getOne);
 
 router.post("/", upsert);
 
-router.put("/:id", upsert);
+router.post("/:id", upsert);
 
 router.delete("/:id", remove);
 
